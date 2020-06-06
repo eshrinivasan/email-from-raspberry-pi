@@ -12,17 +12,18 @@
 from email_handler import Class_eMail
 
 #set the email ID where you want to send the test email 
-To_Email_ID = "pradeep.si@gmail.com"
+To_Email_ID = "nsshrinivasan@gmail.com"
 
+file1 = open("online.txt","r+")
 
 # Send Plain Text Email 
 email = Class_eMail()
-email.send_Text_Mail(To_Email_ID, 'Plain Text Mail Subject', 'This is sample plain test email body.')
+email.send_Text_Mail(To_Email_ID, file1.readline(), '')
 del email
 
 
 # Send HTML Email
-email = Class_eMail()
-email.send_HTML_Mail(To_Email_ID, 'HTML Mail Subject', '<html><h1>This is sample HTML test email body</h1></html>')
-del email
+#email = Class_eMail()
+#email.send_HTML_Mail(To_Email_ID, 'HTML Mail Subject', '<html><h1>This is sample HTML test email body</h1></html>')
+#del email
 
